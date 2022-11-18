@@ -10,6 +10,6 @@ public class MakeDamage : MonoBehaviour
 
     public void DoDamage()
     {
-        _player.GetDamage(_numberOfDamage);
+        _player.DownGradeHealthValue(_numberOfDamage);
     }
 }

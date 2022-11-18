@@ -10,10 +10,15 @@ public class ShowHPValue : MonoBehaviour
     [SerializeField] private Player _player;
 
     private float _speedOfValueChange = 0.5f;
-    
-    void Update()
+
+    private void Start()
     {
-       float _targetValue = _player.Health;
-      _slider.DOValue(_targetValue, _speedOfValueChange);
+        _slider.value = _player.Health;
+    }
+
+    public void ChangeHPValue()
+    {
+        float _targetValue = _player.Health;
+        _slider.DOValue(_targetValue, _speedOfValueChange);
     }
 }

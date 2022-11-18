@@ -10,6 +10,6 @@ public class Healing : MonoBehaviour
 
     public void Heal()
     {
-        _player.GetHeal(_numberOfHeal);
+        _player.RaiseHealthValue(_numberOfHeal);
     }
 }

@@ -6,19 +6,22 @@ public class Player : MonoBehaviour
 { 
     public float Health { get; private set; } = 50;
 
-    public void GetDamage(float damage)
+    public void DownGradeHealthValue(float damage)
     {
+        int minHealthValue = 0;
+       
         Health -= damage;
-
-        if (Health <= 0)
+        if (Health <= minHealthValue)
         {
             Die();
         }
     }
 
-    public void GetHeal(float numberOfHeal)
+    public void RaiseHealthValue(float numberOfHeal)
     {
-        if(Health < 100)
+        int maxHealthValue = 100;
+        
+        if(Health < maxHealthValue)
         {
             Health += numberOfHeal;
         }      

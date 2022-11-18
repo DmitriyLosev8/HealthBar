@@ -693,6 +693,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1895805611}
+        m_TargetAssemblyTypeName: ShowHPValue, Assembly-CSharp
+        m_MethodName: ChangeHPValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1052216969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +831,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1895805609}
         m_TargetAssemblyTypeName: MakeDamage, Assembly-CSharp
         m_MethodName: DoDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1895805611}
+        m_TargetAssemblyTypeName: ShowHPValue, Assembly-CSharp
+        m_MethodName: ChangeHPValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
