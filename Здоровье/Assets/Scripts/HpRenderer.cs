@@ -18,7 +18,7 @@ public class HpRenderer : MonoBehaviour
 
     public void ChangeHPValue()
     {
-        float _targetValue = _health.HpValue;
-        _slider.DOValue(_targetValue, _speedOfValueChange);
+        float targetValue = _health.HpValue;
+        _slider.DOValue(targetValue, _speedOfValueChange);
     }
 }

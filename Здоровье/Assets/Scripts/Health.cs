@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    private float _numberOfValueChange = 10; 
     public float HpValue { get; private set; } = 50;
-    private float _numberOfValueChange = 10;
-
-    public void DownGradeHpValue()
+    
+    public void MakeDamage()
     {
-        HpValue -= _numberOfValueChange;
+        int minHpValue = 0;
+
+        if (HpValue > minHpValue)
+        {
+            HpValue -= _numberOfValueChange;
+        }
     }
 
-    public void RaiseHpValue()
+    public void Heal()
     {
         int maxHpValue = 100;
 
