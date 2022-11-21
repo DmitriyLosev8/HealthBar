@@ -4,21 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class ShowHPValue : MonoBehaviour
+public class HpRenderer : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
-    [SerializeField] private Player _player;
+    [SerializeField] private Health _health;
 
     private float _speedOfValueChange = 0.5f;
 
     private void Start()
     {
-        _slider.value = _player.Health;
+        _slider.value = _health.HpValue;
     }
 
     public void ChangeHPValue()
     {
-        float _targetValue = _player.Health;
+        float _targetValue = _health.HpValue;
         _slider.DOValue(_targetValue, _speedOfValueChange);
     }
 }

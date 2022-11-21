@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc8529fb085387438100e59ca830471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Health>k__BackingField: 50
 --- !u!212 &718519447
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -681,9 +682,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1895805610}
-        m_TargetAssemblyTypeName: Healing, Assembly-CSharp
-        m_MethodName: Heal
+      - m_Target: {fileID: 1895805612}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: RaiseHpValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -828,9 +829,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1895805609}
-        m_TargetAssemblyTypeName: MakeDamage, Assembly-CSharp
-        m_MethodName: DoDamage
+      - m_Target: {fileID: 1895805612}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: DownGradeHpValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -903,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 718519446}
+  _numberOfDamage: 10
 --- !u!1 &1411453221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,9 +1255,8 @@ GameObject:
   - component: {fileID: 1895805607}
   - component: {fileID: 1895805606}
   - component: {fileID: 1895805605}
-  - component: {fileID: 1895805610}
-  - component: {fileID: 1895805609}
   - component: {fileID: 1895805611}
+  - component: {fileID: 1895805612}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1348,32 +1349,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1895805609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895805604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 978945b22582724419f5f271e78efbfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 718519446}
---- !u!114 &1895805610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895805604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c437d78b1167ab4c98888fe3eabd95b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 718519446}
 --- !u!114 &1895805611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1387,7 +1362,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1028136713}
-  _player: {fileID: 718519446}
+  _health: {fileID: 1895805612}
+--- !u!114 &1895805612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895805604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb7ca682d0b88b4d92456b191baad75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1912850754
 GameObject:
   m_ObjectHideFlags: 0
